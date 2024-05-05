@@ -1,0 +1,13 @@
+@for(row of grid(); track $index) {
+<div class="flex" #gridElement id="gridElement">
+  @for (item of row; track item) {
+  <brew-color-grid-item
+  (keydown)="keyMan.onKeydown($event)"
+    [checked]="value === item"
+    [value]="item"
+    [size]="itemSize"
+    [disabled]="disabled"
+  />
+  }
+</div>
+}
